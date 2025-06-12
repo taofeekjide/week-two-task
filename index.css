@@ -18,10 +18,17 @@ body {
   margin-right: 10px;
 }
 
+.todo-list {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
 .todo-input-grid,
 .todo-grid {
   display: grid;
-  grid-template-columns: 250px 120px 100px 100px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -78,25 +85,15 @@ body {
   background-color: darkred;
 }
 
-@media (max-width: 649px) {
+@media (max-width: 600px) {
   .todo-input-grid,
   .todo-grid {
-    display: grid !important;
-    grid-template-columns: 110px 107px 73px 60px !important;
-    gap: 5px !important;
-    margin-bottom: 10px !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
   }
-  .todo-list{
-    width: 340px !important;
-  }
-}
 
-@media (max-width: 800px) and (min-width: 650px) {
-  .todo-input-grid,
-  .todo-grid {
-    display: grid !important;
-    grid-template-columns: 150px 120px 100px 100px !important;
-    gap: 10px !important;
-    margin-bottom: 10px !important;
+  .todo-list {
+    padding: 10px;
+    margin: 10px;
   }
 }
