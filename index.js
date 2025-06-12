@@ -1,8 +1,7 @@
 const todoList = JSON.parse(localStorage.getItem("todoList")) || [
   {
     name: "make dinner",
-    date: "2022-12-22",
-    time: "20:12",
+    date: "2022-12-22"
   },
 ];
 
@@ -13,13 +12,12 @@ document.querySelector(".js-add-button").addEventListener("click", () => {
 const addTodo = () => {
   const nameInput = document.querySelector(".js-todo-input");
   const dateInput = document.querySelector(".js-todo-date");
-  const timeInput = document.querySelector(".js-todo-time");
 
   const name = nameInput.value.trim();
   const date = dateInput.value;
   const time = timeInput.value;
 
-  if (name === "" || date === "" || time === "") return;
+  if (name === "" || date === "") return;
 
   const newTodo = {
     name,
@@ -31,7 +29,6 @@ const addTodo = () => {
 
   nameInput.value = "";
   dateInput.value = "";
-  timeInput.value = "";
 
   displayTodo();
   localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -55,10 +52,6 @@ const displayTodo = () => {
     dateEl.textContent = date;
     dateEl.className = "date-space";
 
-    const timeEl = document.createElement("div");
-    timeEl.textContent = time;
-    timeEl.className = "time-space";
-
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.className = "delete-button";
@@ -69,7 +62,7 @@ const displayTodo = () => {
       localStorage.setItem("todoList", JSON.stringify(todoList));
     });
 
-    todoRow.append(nameEl, dateEl, timeEl, deleteBtn);
+    todoRow.append(nameEl, dateEl, deleteBtn);
 
     container.appendChild(todoRow);
   });
