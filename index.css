@@ -81,22 +81,22 @@ body {
 @media (max-width: 649px) {
   .todo-input-grid,
   .todo-grid {
-    display: grid;
-    grid-template-columns: 110px 107px 73px 60px;
-    gap: 5px;
-    margin-bottom: 10px;
+    display: grid !important;
+    grid-template-columns: 110px 107px 73px 60px !important;
+    gap: 5px !important;
+    margin-bottom: 10px !important;
   }
   .todo-list{
-    width: 340px;
+    width: 340px !important;
   }
 }
 
 @media (max-width: 800px) and (min-width: 650px) {
   .todo-input-grid,
   .todo-grid {
-    display: grid;
-    grid-template-columns: 150px 120px 100px 100px;
-    gap: 10px;
-    margin-bottom: 10px;
+    display: grid !important;
+    grid-template-columns: 150px 120px 100px 100px !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
   }
 }
