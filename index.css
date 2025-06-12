@@ -86,6 +86,9 @@ body {
     gap: 5px;
     margin-bottom: 10px;
   }
+  .todo-list{
+    width: 340px;
+  }
 }
 
 @media (max-width: 800px) and (min-width: 650px) {
